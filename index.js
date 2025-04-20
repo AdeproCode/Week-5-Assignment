@@ -130,7 +130,7 @@ console.log(result);
 //To return all drugs that are not prescription-only.
 
 const notPrescriptionOnly = drugs.filter((notRequire) => {
-    return notRequire.isPrescriptionOnly === false
+    return !notRequire.isPrescriptionOnly
 });
 
 console.log(notPrescriptionOnly)
