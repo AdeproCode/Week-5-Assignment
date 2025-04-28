@@ -154,11 +154,15 @@ console.log(drugManuf)
 //Question ten
 //To use forEach() to count how many drugs are Analgesics.
 
-let counter = 0;
-const toCount = drugs.forEach((each) => {
-        if (each.category === "Analgesic") {
-        counter++
-    }
-      })
-console.log(counter)
+const counter = (drug, category) => {
+    let count = 0;
+    drug.forEach(each => {
+        if (each.category === category) {
+            count++;
+        }
+    })
+    return count;
+};
+const drugCount = counter(drugs, "Analgesic")
+    console.log(drugCount)
 
